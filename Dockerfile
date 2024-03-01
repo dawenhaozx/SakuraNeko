@@ -4,7 +4,7 @@ COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr
 
 RUN install-php-extensions pcntl
 
-RUN apk --no-cache add bash curl shadow supervisor redis git mailcap caddy nginx sqlite nginx-mod-http-brotli mysql-client php8.1 php8.1-zlib php8.1-xml php8.1-phar php8.1-intl php8.1-dom php8.1-xmlreader php8.1-ctype php8.1-session php8.1-mbstring php8.1-tokenizer php8.1-gd php8.1-redis php8.1-bcmath php8.1-iconv php8.1-pdo php8.1-posix php8.1-gettext php8.1-simplexml php8.1-sodium php8.1-sysvsem php8.1-fpm php8.1-mysqli php8.1-json php8.1-openssl php8.1-curl php8.1-sockets php8.1-zip php8.1-pdo_mysql php8.1-xmlwriter php8.1-opcache php8.1-gmp php8.1-pdo_sqlite php8.1-sqlite3 php8.1-pcntl php8.1-fileinfo
+RUN apk --no-cache add bash curl shadow supervisor redis git mailcap caddy nginx sqlite nginx-mod-http-brotli mysql-client
 RUN mkdir /www /wwwlogs /rdb
 RUN mkdir -p /run/php /run/caddy /run/supervisor
 COPY config/nginx.conf /etc/nginx/nginx.conf
